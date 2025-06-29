@@ -1,0 +1,157 @@
+/*
+    rgb(1, 2, 78)(darkblue);
+    rgb(84, 56, 100)(purple);
+    rgb(82, 83, 148)(purple-light)
+    rgb(139, 67, 103)(pink);
+*/
+body{
+    background-color:rgb(1, 2, 78) ;
+    color:white ;
+}
+.mycontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    max-width: 500px;
+    margin: 120px auto 0 auto;
+}
+.top{
+    font-family: fantasy;
+    margin-left: 10%;
+    font-size: 45px;
+    font-weight: bolder;
+    color: rgb(84, 56, 100);
+    text-shadow: 2px 2px 5px rgb(18, 1, 26);
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+    margin-top: 20px;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.myinner-container{
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid rgb(84, 56, 100);
+    display: flex;
+    justify-content:space-between;
+    gap: 30px;
+    width: 100%;
+}
+.myheadtext{
+    width:100% ;
+}
+#progressbar{
+    width: 100%;
+    height: 10px;
+    background-color:rgb(82, 83, 148) ;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#progress{
+    width: 100%;
+    height: 10px;
+    background-color:rgb(139, 67, 103) ;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+}
+#fracnum{
+    width: 100px;
+    height: 100px;
+    background-color:rgb(84, 56, 100) ;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bolder;
+}
+form{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+input{
+    flex: 1;
+    padding:16px;
+    background-color:rgb(82, 83, 148);
+    border: 1px solid rgb(84, 56, 100) ;
+    border-radius: 10px;
+    outline: none;
+    color:white;
+}
+#Addbutton{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(84, 56, 100);
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    outline: none;
+    cursor: pointer;
+
+}
+#task-List {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+    list-style: none;
+}
+
+.taskItem {
+    margin-top: 40px;
+    width: 425px;
+    min-height:40px;
+    display: flex;
+    background-color: rgb(82, 83, 148);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    gap:10px;
+
+}
+.task input{
+    width:100%;
+    height:100%;
+}
+.completed p{
+    text-decoration: line-through;
+    color:rgb(255, 100, 100);
+
+}
+.taskItem img{
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+
+}
+.textend{
+    margin-top: 20px;
+    display: flex;
+    gap:30px;
+}

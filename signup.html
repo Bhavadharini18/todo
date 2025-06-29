@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Form</title>
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+
+<body>
+    <h1>SignUp</h1>
+    <form id="userForm">
+        <label>Username: <input name="username" required></label>
+        <label>Email-ID: <input name="email" required></label>
+        <label>Password: <input name="password" required></label>
+        <label>Phone: <input name="phone" required></label>
+        <button type="submit"><a   style="text-decoration: none; font-size: 20px;color: black;"  href="./login.html">Submit</a></button><br><br>
+    </form>
+
+    <script src="index.js">
+        document.getElementById('userForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = {
+                username: this.username.value,
+                email:this.email.value,
+                password: this.password.value,
+                phone: this.phone.value,
+            };
+            let data = JSON.parse(localStorage.getItem('userData')) || [];
+            data.push(formData);
+            localStorage.setItem('userData', JSON.stringify(data));
+
+            alert("Signup Done!");
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

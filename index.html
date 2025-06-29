@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <link href="./css/style1.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 bg-dark text-white">
+            <div  style="float: left; margin-top: 50px;box-shadow:  0 3px 3px  white;"  class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
+                <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
+                    data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <img src="./assets/todo.png" alt="profile" width="50" height="50" class="rounded-circle">
+                    <span class="visually-hidden">Icon-only</span>
+                </a>
+                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                    <li style="background-color:rgb(84, 56, 100) ;">
+                        <a href="index.html" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-original-title="Dashboard">
+                            <img src="./assets/home.png" alt="home" width="24" height="24" class="rounded-circle">
+                        </a>
+                    </li>
+                    
+                    <li style="background-color: rgb(82, 83, 148);">
+                        <a href="progress.html" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-original-title="Dashboard">
+                            <img src="./assets/progress.png" alt="progress" width="35" height="35" class="rounded-circle">
+                        </a>
+                    </li>
+                    <li style="background-color: rgb(82, 83, 148);">
+                        <a href="pending.html" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-original-title="Orders">
+                            <img src="./assets/pending.png" alt="pending" width="35" height="35" class="rounded-circle">
+                        </a>
+                    </li>
+                    <li style="background-color: rgb(82, 83, 148);">
+                        <a href="completed.html" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-original-title="Customers">
+                            <img src="./assets/completed.png" alt="completed" width="30" height="30" class="rounded-circle">
+                            
+                        </a>
+                    </li>
+                </ul>
+                <div style="background-color: rgb(82, 83, 148);" class="dropdown border-top">
+                    <a href="#"
+                        class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                        id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assets/profile.png" alt="profile" width="30" height="30" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                        <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-end">
+                <button type="button" class="btn btn-light text-dark me-2" id="loginBtn"><a style="text-decoration: none; color: black;"  href="./login.html">Login</a></button>
+                <button type="button" style="background-color: rgb(82, 83, 148);"class="btn btn-light text-light me-2" id="signupBtn"><a  style="text-decoration: none;color:white;" href="./signup.html">Sign-up</a></button>
+            </div>
+        </div>
+        </div>
+    </header>
+    <h1  class="top">Let’s Get Things Done ✨</h1>
+    <div class="mycontainer">
+        <div class="myinner-container">
+            <div class="myheadtext">
+                <h1>To-Do 📝</h1>
+                <p>Stay Consistent !</p>
+                <div id="progressbar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="completedis">
+                <p id="fracnum">2/3</p>
+            </div>
+        </div>
+        <form id="myform">
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <button type="submit" id="Addbutton">+</button>
+        </form>
+        <ul class="mytask-list"></ul>
+    </div>
+
+    <script src="index.js"> </script>
+</body>
+
+</html>

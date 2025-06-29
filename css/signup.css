@@ -1,0 +1,106 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:rgb(1, 2, 78) ;
+  margin: 0;
+  padding: 60px 20px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+  font-weight: bolder;
+}
+form {
+  max-width: 450px;
+  margin: auto;
+  background: rgb(84, 56, 100);
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-3px);
+}
+label {
+  display: block;
+  font-weight:20px;
+  margin-bottom: 8px;
+  color: black;
+}
+
+input,
+textarea {
+  width: 90%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fdfdfd;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color:  rgb(139, 67, 103);
+  outline: none;
+  box-shadow: 0 0 9px  rgb(139, 67, 103);
+}
+button {
+  background-color:  rgb(139, 67, 103);
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 23%;
+  cursor: pointer;
+  width: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background- 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color:  rgb(218, 62, 140);
+  transform: scale(1.03);
+}
+.entry {
+  background: white;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.entry h3 {
+  margin-top: 0;
+  color: #2d3436;
+  font-size: 20px;
+}
+
+.entry p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 20px 0;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

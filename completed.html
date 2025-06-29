@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Completed Tasks</title>
+  <link rel="stylesheet" href="./css/style1.css" />
+</head>
+<body>
+  <h1>Completed Tasks</h1>
+  <ul class="mytask-list" id="completedTasks"></ul>
+
+  <script>
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const list = document.getElementById("completedTasks");
+    tasks.filter(t => t.completed).forEach(t => {
+      const li = document.createElement("li");
+      li.className = "taskItem completed";
+      li.textContent = t.text;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pending Tasks</title>
+  <link href="./css/style1.css" rel="stylesheet" />
+</head>
+<body>
+  <h1 style="text-align:center; margin-top: 40px;">Pending Tasks</h1>
+  <ul class="mytask-list" id="pendingTasks"></ul>
+
+  <script>
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const list = document.getElementById("pendingTasks");
+    tasks.filter(t => !t.completed).forEach(t => {
+      const li = document.createElement("li");
+      li.className = "taskItem";
+      li.textContent = t.text;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
